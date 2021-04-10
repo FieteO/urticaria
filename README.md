@@ -1,1 +1,2 @@
-find "CAPTUM" -type f -print0 | xargs -0 cp -t destdir
+# Aims of the project
+This project aims to use data science tools to analyse the urticaria desease.
