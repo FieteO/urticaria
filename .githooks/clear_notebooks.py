@@ -1,14 +1,10 @@
 import argparse
-from logging import ERROR
-import os
-import subprocess
 
-from nbconvert import HTMLExporter
 from nbconvert.preprocessors import ClearOutputPreprocessor, ExecutePreprocessor
 from nbconvert.preprocessors import CellExecutionError
 import nbformat
 
-def process_notebook(notebook_filename, html_directory = 'notebook-html', execute=True):
+def process_notebook(notebook_filename, execute=True):
     '''Checks if an IPython notebook runs without error from start to finish. If so, writes the notebook to HTML (with outputs) and overwrites the .ipynb file (without outputs).
     '''
     with open(notebook_filename) as f:
@@ -25,7 +21,6 @@ def process_notebook(notebook_filename, html_directory = 'notebook-html', execut
         msg = ''
 
     except CellExecutionError:
-        out = None
         msg = f'\n  Error executing the notebook "{notebook_filename}".\n'
         msg += f'  See notebook "{notebook_filename}" for the traceback.'
         
@@ -41,7 +36,7 @@ def process_notebook(notebook_filename, html_directory = 'notebook-html', execut
 
 if __name__ == '__main__':
     
-    parser = argparse.ArgumentParser(description='read some notebok files')
+    parser = argparse.ArgumentParser(description='read some notebook files')
     parser.add_argument('notebooks',
                         metavar='Notebooks', 
                         type=str, 
