@@ -7,7 +7,7 @@ notebooks=`git diff --cached --name-only --diff-filter=d | grep  .ipynb`
 if [ ! -z "$notebooks" ]
 then
     # Run the script to clear the notebooks
-    python .githooks/clear_notebooks.py $notebooks
+    python3 .githooks/clear_notebooks.py $notebooks
     # Re-add notebooks to staging area
     git add $notebooks
 fi
