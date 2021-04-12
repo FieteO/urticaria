@@ -1,4 +1,5 @@
 import argparse
+from logging import ERROR
 import os
 import subprocess
 
@@ -54,7 +55,7 @@ if __name__ == '__main__':
     for fn in notebooks:
         if not fn.endswith('.ipynb'):
             print(f'Error: file {fn} is not an IPython notebook.')
-            raise
+            raise Exception(f'Error: file {fn} is not an IPython notebook.')
         
     for fn in notebooks:
         process_notebook(fn, execute=False)
