@@ -23,7 +23,7 @@ jobs:
           python-version: 3.8
 
       - name: Execute all Notebooks
-        shell: bash
+        shell: bash -l {0}
         run: |
           conda activate jupyter-actions
           pytest
