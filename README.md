@@ -20,5 +20,14 @@ If you are using conda, do the following, prior to running the notebook (also se
     conda env list
     ```
 
+## Create an `.env` file
+You need an `.env` file that contains your AWS credentials. Create one and add the following environment variables:
+```
+REGION_NAME=<region>
+AWS_ACCESS_KEY_ID=<key_id>
+AWS_SECRET_ACCESS_KEY=<key> 
+```
+
 # [AWS Textract](https://aws.amazon.com/textract/)
 Textract is an Optical Character Recognition (OCR) service from Amazon.
+
