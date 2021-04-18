@@ -1,3 +1,5 @@
 CAPTUM
 CAPTUM.zip
 files.csv
+.DS_Store
+.ipynb_checkpoints/

@@ -1,0 +1,9 @@
+
+name: urticaria
+channels:
+    - conda-forge
+dependencies:
+  - jupyter
+  - nbformat
+  - nbconvert
+  - pytest
