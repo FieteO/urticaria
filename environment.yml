@@ -7,3 +7,4 @@ dependencies:
   - nbformat
   - nbconvert
   - pytest
+  - boto3
