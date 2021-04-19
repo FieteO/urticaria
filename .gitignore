@@ -3,4 +3,5 @@ CAPTUM.zip
 files.csv
 .DS_Store
 .ipynb_checkpoints/
+.vscode/*
 .env
