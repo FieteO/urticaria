@@ -1,7 +1,7 @@
 
 name: urticaria
 channels:
-    - conda-forge
+   - conda-forge
 dependencies:
   - jupyter
   - nbformat
@@ -9,3 +9,4 @@ dependencies:
   - pytest
   - boto3
   - pandas
+  - python-dotenv

@@ -22,7 +22,7 @@ If you are using conda, do the following, prior to running the notebook (also se
     ``` bash
     conda env list
     ```
-
+    
 ## Update an existing conda environment
 
 If you already have an existing conda environment, run the following script to update it with new dependencies.
@@ -34,4 +34,15 @@ conda env update -f environment.yml
 
 # [AWS Textract](https://aws.amazon.com/textract/)
 
+Textract is an Optical Character Recognition (OCR) service from Amazon.
+
+## Create an `.env` file
+You need an `.env` file that contains your AWS credentials. Create one and add the following environment variables:
+```
+REGION_NAME=<region>
+AWS_ACCESS_KEY_ID=<key_id>
+AWS_SECRET_ACCESS_KEY=<key> 
+```
+
+# [AWS Textract](https://aws.amazon.com/textract/)
 Textract is an Optical Character Recognition (OCR) service from Amazon.
