@@ -32,10 +32,6 @@ conda activate urticaria
 conda env update -f environment.yml
 ```
 
-# [AWS Textract](https://aws.amazon.com/textract/)
-
-Textract is an Optical Character Recognition (OCR) service from Amazon.
-
 ## Create an `.env` file
 You need an `.env` file that contains your AWS credentials. Create one and add the following environment variables:
 ```
