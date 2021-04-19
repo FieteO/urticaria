@@ -43,6 +43,8 @@ REGION_NAME=<region>
 AWS_ACCESS_KEY_ID=<key_id>
 AWS_SECRET_ACCESS_KEY=<key> 
 ```
+You can find your credentials here:  
+![AWS Credentials](aws_credentials.png)
 
 # [AWS Textract](https://aws.amazon.com/textract/)
 Textract is an Optical Character Recognition (OCR) service from Amazon.
