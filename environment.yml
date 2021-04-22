@@ -7,6 +7,6 @@ dependencies:
   - nbformat
   - nbconvert
   - pytest
-  - boto3
+  - pdfminer.six
   - pandas
   - python-dotenv

@@ -5,3 +5,4 @@ files.csv
 .ipynb_checkpoints/
 .vscode/*
 .env
+out/*
