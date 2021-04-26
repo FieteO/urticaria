@@ -1,6 +1,6 @@
 # Aims of the project
 
-This project aims to use data science tools to analyse the [urticaria](https://en.wikipedia.org/wiki/Hives) desease.
+This project aims to use data science tools to analyse the [urticaria](https://en.wikipedia.org/wiki/Hives) disease.
 
 # Getting started
 
