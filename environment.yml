@@ -7,6 +7,11 @@ dependencies:
   - nbformat
   - nbconvert
   - pytest
+  - pytesseract
   - pdfminer.six
+  - pdf2image
   - pandas
+  - PIL
+  - numpy
   - python-dotenv
+  - multiprocessing
