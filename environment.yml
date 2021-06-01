@@ -7,10 +7,11 @@ dependencies:
   - nbformat
   - nbconvert
   - pytest
-  - pytesseract
+  - tesserocr
   - pdfminer.six
   - pdf2image
   - pandas
   - pillow
   - numpy
   - python-dotenv
+  - langdetect
