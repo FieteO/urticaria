@@ -7,3 +7,4 @@ captum.csv
 .vscode/*
 .env
 out/*
+*.csv
