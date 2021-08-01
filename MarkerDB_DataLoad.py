@@ -7,7 +7,7 @@ def parse_html(url: str):
 
     """
     This function sends an request to the MarkerDB_Download-Site and
-    returns the html code
+    returns the html code.
     """
 
     try:
@@ -75,7 +75,7 @@ def save_DataFrame(data: pd.DataFrame):
         data.to_csv(f'{target_path}/{filename}', sep=';', index=True)
         print(f'DataFrame successfully saved into {target_path}')
     except:
-        print('Somthing went wrong during the saving process. Check the code again.')
+        print('Something went wrong during the saving process. Check the code again.')
 
 
 if __name__ == "__main__":
