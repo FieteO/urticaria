@@ -8,7 +8,6 @@ captum.csv
 .env
 out/*
 *.csv
-*.jsonl
 .idea/
 __pycache__/
 retrieval/Model/

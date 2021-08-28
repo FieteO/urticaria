@@ -4,8 +4,9 @@ from itertools import chain
 
 def read_df(filepath):
     df = pd.read_json(path_or_buf=filepath, lines=True)
-    df.set_index('id', inplace=True)
-    df.drop(['data'], axis=1, inplace=True)
+    # df.set_index('id', inplace=True)
+    # df.drop(['data'], axis=1, inplace=True)
+    df.drop(['id'], axis=1, inplace=True)
     df.rename(columns = {'label':f'labels_{filepath[:-6]}'}, inplace = True)
     return df
 
@@ -71,13 +72,15 @@ def flatten_labels(labels):
 
 
 if __name__ == '__main__':
+    tim = read_df('tim.jsonl')
     fiete = read_df('fiete.jsonl')
-    admin = read_df('admin.jsonl')
+    df = pd.merge(tim, fiete, on='data')
 
-    df = pd.merge(admin, fiete, on='id')
+    if len(df) > 0:
+        df.labels_tim = df.labels_tim.map(flatten_labels)
+        df.labels_fiete = df.labels_fiete.map(flatten_labels)
 
-    df.labels_admin = df.labels_admin.map(flatten_labels)
-    df.labels_fiete = df.labels_fiete.map(flatten_labels)
-
-    df['cohen_kappa'] = df.apply(lambda x: cohen_kappa(x['labels_admin'], x['labels_fiete']), axis=1)
-    print(df.cohen_kappa.mean())
+        df['cohen_kappa'] = df.apply(lambda x: cohen_kappa(x['labels_fiete'], x['labels_tim']), axis=1)
+        print(f'Kohens Kappa Score: \n{df.cohen_kappa.mean()}')
+    else:
+        print('There is no overlap between the annotation files.')
